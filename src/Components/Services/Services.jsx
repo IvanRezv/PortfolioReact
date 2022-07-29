@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useContext } from "react";
+import { themeContext } from "../../Context";
 import './Services.css';
 import HeartEmoji from '../../img/heartemoji.png';
 import Glasses from '../../img/glasses.png';
 import Humble from '../../img/humble.png';
 import Card from "../Card/Card";
 import Resume from './resume.pdf';
-
+import { motion } from "framer-motion";
 
 const Services = () => {
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
+
+    const transition = {
+    duration: 1,
+    type: "spring",
+    };
+
     return (
-        <div className="services">
+        <div className="services" id="services">
             <div className="awesome">
-            <span> My awesome app</span>
+            <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
             <span>services</span>
             <spane> Here are a lot of text and breakdown
                 <br />
@@ -24,29 +33,44 @@ const Services = () => {
             </div>
             {/* right site */}
             <div className="cards">
-                <div style={{left: '14rem'}}>
+                <motion.div
+                  initial={{ left: "25rem" }}
+                  whileInView={{ left: "14rem" }}
+                  transition={transition}
+                >
                     <Card
                     emoji = {HeartEmoji}
                     heading = {'Design'}
-                    detail = {'Figma,Sketch,PH, etc'}
+                    detail = {'Figma,Sketch,PH, abobus,abobus and abobus'}
                     />
-                </div>
+                </motion.div>
             {/* second card */}
-                <div style={{top: '12rem', left: '-4rem'}}>
-                    <Card
-                    emoji = {Glasses}
-                    heading = {'Developer'}
-                    detail = {'HTML, CSS, DJANGO, REACT'}
-                    />
-                </div>
-            {/* 3rd card */}
-                <div style={{top: '19rem', left: '12rem'}}>
-                    <Card
-                    emoji = {Humble}
-                    heading = {'UI/UX'}
-                    detail = {'Interface development'}
-                    />
-                </div>
+                <motion.div
+                  initial={{ left: "-11rem", top: "12rem" }}
+                  whileInView={{ left: "-4rem" }}
+                  transition={transition}
+                >
+                  <Card
+                    emoji={Glasses}
+                    heading={"Developer"}
+                    detail={"Html, Css, JavaScript, React, Nodejs, Express"}
+                  />
+                </motion.div>
+                {/* 3rd */}
+                <motion.div
+                  initial={{ top: "19rem", left: "25rem" }}
+                  whileInView={{ left: "12rem" }}
+                  transition={transition}
+                >
+                  <Card
+                    emoji={Humble}
+                    heading={"UI/UX"}
+                    detail={
+                      "Lorem ispum dummy text are usually use in section where we need some random text"
+                    }
+                    color="rgba(252, 166, 31, 0.45)"
+                  />
+                </motion.div>
             <div className="blur s-blur2" style={{ background: 'var(--purple)'}}></div>
             </div>
         </div>
