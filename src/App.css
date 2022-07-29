@@ -27,10 +27,11 @@
     padding: 11px 26px 11px 26px;
   }
   
-.button:hover {
+  .button:hover {
     background: white;
     cursor: pointer;
-    color: var(--orange);
     border: 1px solid var(--orange);
-}
+    color: var(--orange);
+  }
+
   
