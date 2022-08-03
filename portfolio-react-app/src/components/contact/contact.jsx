@@ -1,8 +1,17 @@
-import React from 'react'
+import React,{ useCallback} from 'react';
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
+import particlesOptions from "../../particles.json";
 
-const contact = () => {
+
+const Contact = () => {
+  const particlesInit = useCallback(main => {
+    loadFull(main);
+  }, [])
+
   return (
-    <div name='contact' className='w-full h-screen bg-[#0a192f] flex justify-center items-center p-4'>
+    <div name='contact' className='w-full h-screen flex justify-center items-center p-4'>
+      <Particles  options={particlesOptions} init={particlesInit} />
         <form action='' className='flex flex-col max-w-[600px] w-full'>
             <div className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300'>Contact</p>
@@ -17,4 +26,4 @@ const contact = () => {
   );
 }
 
-export default contact
+export default Contact

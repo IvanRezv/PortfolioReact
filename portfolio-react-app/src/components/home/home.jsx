@@ -1,9 +1,18 @@
-import React from 'react';
+import React,{ useCallback } from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
+import particlesOptions from "../../particles.json";
+
 
 const Home = () => {
+  const particlesInit = useCallback(main => {
+    loadFull(main);
+  }, [])
+
   return (
-    <div name='home' className='w-full h-screen bg-[#0a192f]'>
+    <div name='home' className='w-full h-screen'>
+      <Particles  options={particlesOptions} init={particlesInit} />
       {/* Container */}
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
         <p className='text-pink-600'>Hi, my name is</p>
