@@ -2,10 +2,10 @@ FROM node:18.6.0 as build
 
 WORKDIR /app/
 
-COPY package*.json ./
+COPY portfolio-react-app/package*.json ./
 RUN npm i -P
 
-COPY . ./
+COPY portfolio-react-app/.* ./
 RUN npm run build
 
 RUN ls -la
