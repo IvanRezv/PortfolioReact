@@ -16,7 +16,7 @@ const Progress = () => {
         <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-container w-full h-full'>
             <div >
                 <p className='text-4xl font-bold inline border-b-4 border-pink-600 '>Skills</p>
-                <p className='py-4'>These are my experience in Persentage</p>
+                <p className='py-4'>These are my experience in percentage. How i see it.</p>
             </div>
             
             <div className='skills-bar text-black'>
@@ -34,13 +34,13 @@ const Progress = () => {
                 </div>
                 <div className='bar'>
                     <div className='info'>
-                        <span>Unix</span>
+                        <span>Unix administration</span>
                     </div>
                     <div className='progress-line unix'><span></span></div>
                 </div>
                 <div className='bar'>
                     <div className='info'>
-                        <span>Python and Tooling</span>
+                        <span>Bash and Python</span>
                     </div>
                     <div className='progress-line python'><span></span></div>
                 </div>
@@ -49,6 +49,12 @@ const Progress = () => {
                         <span>Web Development</span>
                     </div>
                     <div className='progress-line webdev'><span></span></div>
+                </div>
+                <div className='bar'>
+                    <div className='info'>
+                        <span>Database administration</span>
+                    </div>
+                    <div className='progress-line dba'><span></span></div>
                 </div>
             </div>
         </div>

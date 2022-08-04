@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
-import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa';
+import {FaBars, FaTimes, FaGithub, FaAward, FaYoutube} from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 import Logo from '../../assets/logo.png';
+import Resume from '../../assets/resume.pdf';
 import {Link} from 'react-scroll';
 
 const navbar = () => {
@@ -20,27 +21,32 @@ const navbar = () => {
 
             {/* menu */}
                 <ul className='hidden md:flex'>
-                    <li>
+                    <li className='hover:bg-[#8892b0] duration-500'>
                         <Link to="home" smooth={true} duration={500}>
                             Home
                         </Link>
                     </li>
-                    <li>
+                    <li className='hover:bg-[#8892b0] duration-500'>
                         <Link to="about" smooth={true} duration={500}>
                             About
                         </Link>
                     </li>
-                    <li>
+                    <li className='hover:bg-[#8892b0] duration-500'>
                         <Link to="skills" smooth={true} duration={500}>
                             Skills
                         </Link>
                     </li>
-                    <li>
+                    <li className='hover:bg-[#8892b0] duration-500'>
+                        <Link to="tools" smooth={true} duration={500}>
+                            Tools
+                        </Link>
+                    </li>
+                    <li className='hover:bg-[#8892b0] duration-500'>
                         <Link to="work" smooth={true} duration={500}>
                             Work
                         </Link>
                     </li>
-                    <li>
+                    <li className='hover:bg-[#8892b0] duration-500'>
                         <Link to="contact" smooth={true} duration={500}>
                             Contact
                         </Link>
@@ -61,7 +67,7 @@ const navbar = () => {
                     : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
                     }
                     >
-                    <li className='py-6 text-4xl'><Link onClick={handleClick}  to="home" smooth={true} duration={500}>
+                    <li className='py-6 text-4xl '><Link onClick={handleClick}  to="home" smooth={true} duration={500}>
                             Home
                         </Link></li>
                     <li className='py-6 text-4xl'><Link onClick={handleClick}  to="about" smooth={true} duration={500}>
@@ -69,6 +75,9 @@ const navbar = () => {
                         </Link></li>
                     <li className='py-6 text-4xl'><Link onClick={handleClick} to="skills" smooth={true} duration={500}>
                             Skills
+                        </Link></li>
+                    <li className='py-6 text-4xl'><Link onClick={handleClick} to="tools" smooth={true} duration={500}>
+                            Tools
                         </Link></li>
                     <li className='py-6 text-4xl'><Link onClick={handleClick} to="work" smooth={true} duration={500}>
                             Work
@@ -82,25 +91,31 @@ const navbar = () => {
                     <ul>
                         <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
                             <a className=' flex justify-between items-center w-full text-gray-300'
-                            href='/'>
-                                Habr <FaLinkedin size={30}/>
+                            href='https://habr.com/ru/users/IvanRezv/posts/'>
+                                Habr <FaAward size={30}/>
                             </a>
                         </li>
                         <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
                             <a className=' flex justify-between items-center w-full text-gray-300'
-                            href='/'>
+                            href='https://github.com/IvanRezv'>
                                 Github <FaGithub size={30}/>
+                            </a>
+                        </li>
+                        <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#FF0000]'>
+                            <a className=' flex justify-between items-center w-full text-gray-300'
+                            href='https://www.youtube.com/channel/UCp9szwN9vMQGj7aFuoIHjhg'>
+                                YouTube <FaYoutube size={30}/>
                             </a>
                         </li>
                         <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
                             <a className=' flex justify-between items-center w-full text-gray-300'
-                            href='/'>
+                            href='mailto:ivanrezv@icloud.com?subject=Want to say smth to you'>
                                 Email <HiOutlineMail size={30}/>
                             </a>
                         </li>
                         <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
                             <a className=' flex justify-between items-center w-full text-gray-300'
-                            href='/'>
+                            href={Resume} download>
                                 Resume <BsFillPersonLinesFill size={30}/>
                             </a>
                         </li>

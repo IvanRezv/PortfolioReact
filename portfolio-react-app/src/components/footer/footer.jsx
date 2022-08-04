@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-  FaFacebook,
-  FaTwitter,
+  FaTelegramPlane,
+  FaGithub,
   FaYoutube,
-  FaLinkedin,
+  FaGitlab,
 } from 'react-icons/fa';
 import {Link} from 'react-scroll';
 import { HiArrowSmUp } from 'react-icons/hi';
@@ -18,20 +18,20 @@ const Footer = () => {
             <div className='flex text-center justify-between items-center'>
                 <div className='flex justify-between w-full sm:max-w-[280px] my-4'>
                     {/* <FaFacebook className='icon' src="github.com" /> */}
-                    <a className='items-center w-full' href='https://github.com'>
-                        <FaLinkedin size={30}/>
+                    <a className='items-center w-full' href='https://github.com/IvanRezv'>
+                        <FaGithub size={30}/>
                     </a>
                     <a className='items-center w-full'
-                    href='/'>
-                        <FaFacebook size={30}/>
+                    href='https://gitlab.com/IvanRezv'>
+                        <FaGitlab size={30}/>
                     </a>
                     <a className='items-center w-full'
-                    href='/'>
-                        <FaTwitter size={30}/>
-                    </a>
-                    <a className='items-center w-full'
-                    href='/'>
+                    href='https://www.youtube.com/channel/UCp9szwN9vMQGj7aFuoIHjhg'>
                         <FaYoutube size={30}/>
+                    </a>
+                    <a className='items-center w-full'
+                    href='https://t.me/Ivan_Rezvetsov'>
+                        <FaTelegramPlane size={30}/>
                     </a>
                     {/* <FaTwitter className='icon' />
                     <FaYoutube className='icon' />
