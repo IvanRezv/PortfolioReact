@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+#    image: registry.gitlab.com/myownlearning/porfolioreact/porfolioreact
+    restart: always
+    ports:
+      - "80:80"
+    networks:
+      - docker_net
+
+
+networks:
+    docker_net:
+        driver: bridge
+
