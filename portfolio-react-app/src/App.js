@@ -6,6 +6,7 @@ import Tools from './components/tools/tools';
 import Skills from './components/skills/skills';
 import Work from "./components/work/work";
 import Contact from './components/contact/contact';
+import Footer from './components/footer/footer';
 import './app.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Tools />
       <Work />
       <Contact />
+      <Footer />
     </div>
   );
 }
