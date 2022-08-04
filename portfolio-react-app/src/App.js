@@ -4,7 +4,7 @@ import Home from './components/home/home';
 import About from './components/about/about';
 import Tools from './components/tools/tools';
 import Skills from './components/skills/skills';
-import Work from "./components/work/work";
+import YouTube from "./components/youtube/youtube";
 import Contact from './components/contact/contact';
 import Footer from './components/footer/footer';
 import './app.css';
@@ -17,7 +17,7 @@ function App() {
       <About />
       <Skills />
       <Tools />
-      <Work />
+      <YouTube />
       <Contact />
       <Footer />
     </div>

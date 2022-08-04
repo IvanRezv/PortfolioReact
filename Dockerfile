@@ -5,7 +5,7 @@ WORKDIR /app/
 COPY portfolio-react-app/package*.json ./
 RUN npm i -P
 
-COPY portfolio-react-app/.* ./
+COPY portfolio-react-app/. ./
 RUN npm run build
 
 RUN ls -la

@@ -43,7 +43,7 @@ const navbar = () => {
                     </li>
                     <li className='hover:bg-[#8892b0] duration-500'>
                         <Link to="work" smooth={true} duration={500}>
-                            Work
+                            YouTube
                         </Link>
                     </li>
                     <li className='hover:bg-[#8892b0] duration-500'>
@@ -80,7 +80,7 @@ const navbar = () => {
                             Tools
                         </Link></li>
                     <li className='py-6 text-4xl'><Link onClick={handleClick} to="work" smooth={true} duration={500}>
-                            Work
+                            YouTube
                         </Link></li>
                     <li className='py-6 text-4xl'><Link onClick={handleClick} to="contact" smooth={true} duration={500}>
                             Contact
