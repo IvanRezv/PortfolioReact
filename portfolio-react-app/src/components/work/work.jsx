@@ -13,7 +13,7 @@ const Work = () => {
   }, [])
 
   return (
-    <div name='work' className='w-full md:h-screen text-gray-300'>
+    <div name='work' className='w-full md:h-screen flex justify-center items-center p-4 text-gray-300'>
       <Particles  options={particlesOptions} init={particlesInit} />
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='pb-8'>
