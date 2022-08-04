@@ -3,19 +3,14 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import particlesOptions from "../../particles.json";
 
-import ReactImg from '../../assets/react.png';
 import Kube from '../../assets/kube.png';
 import Gitlab from '../../assets/gitlab-ci.png';
 import Jenkins from '../../assets/jenkins.png';
-import Django from '../../assets/django.png';
 import Docker from '../../assets/docker.png';
 import Python from '../../assets/python.png';
 import Bash from '../../assets/bash.png';
 import Ansible from '../../assets/ansible.png';
-import Puppet from '../../assets/puppet.png';
-import Git from '../../assets/git.png';
 import Monitoring from '../../assets/grafanaprom.png';
-import Bg from '../../assets/bg.png';
 
 const Tools = () => {
     const particlesInit = useCallback(main => {
